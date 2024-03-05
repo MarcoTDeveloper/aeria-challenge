@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "types": [
+      "@waltz-ui/ui/vue"
+    ]
+  },
+  "include": [
+    "../api/@types/*.d.ts",
+    "src",
+    "*.d.ts"
+  ]
+}

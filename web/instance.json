@@ -1,0 +1,13 @@
+{
+  "site": {
+    "title": "Quickstart",
+    "signinText": "Área restrita",
+    "signupForm": true
+  },
+  "icons": {
+    "libraries": [
+      "@waltz-ui/ui",
+      "aeria-app-layout"
+    ]
+  }
+}

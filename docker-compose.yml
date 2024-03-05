@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  mongo:
+    image: mongo
+    restart: always
+    volumes:
+      - /tmp/mongodb-test:/data/db
+      - api-build:/opt/application/api-build
+    logging:
+      driver: none
+
+  api:
+    build:
+      context: api
+    restart: always
+    depends_on:
+      - mongo
+    volumes:
+      - api-build:/opt/application/api-build
+    env_file: api/production.env
+
+  web:
+    build:
+      context: web
+    depends_on:
+      - api
+    volumes:
+      - api-build:/opt/application/api
+      - web-build:/var/www/html
+
+  nginx:
+    build:
+      context: nginx
+    restart: always
+    depends_on:
+      - web
+    ports:
+      - 80:80
+    volumes:
+      - web-build:/var/www/html
+
+volumes:
+  api-build:
+  web-build:
+

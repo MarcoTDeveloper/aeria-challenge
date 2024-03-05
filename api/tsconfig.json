@@ -1,0 +1,7 @@
+{
+    "extends": "sonata-build/config/tsconfig.json",
+    "compilerOptions": {
+        "outDir": "dist",
+        "preserveSymlinks": true
+    }
+}

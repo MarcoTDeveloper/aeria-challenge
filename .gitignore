@@ -1,0 +1,9 @@
+dist
+node_modules
+release.tar.gz
+etc/crontabs/root
+api/.env
+api/production.env
+api/release
+api/dist
+web/dist

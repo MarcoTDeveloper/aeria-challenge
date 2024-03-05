@@ -1,0 +1,22 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "src/index.ts",
+  "scripts": {
+    "build": "sonata-build -ci",
+    "migrate": "sonata-build -m",
+    "dev": "sonata-build -w",
+    "start": "node -r sonata-api/loader ./release/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sonata-api": "latest"
+  },
+  "devDependencies": {
+    "sonata-build": "latest"
+  }
+}

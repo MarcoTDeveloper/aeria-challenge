@@ -1,0 +1,12 @@
+@import '@waltz-ui/ui/themes/light.less';
+@import '@waltz-ui/ui/themes/dark.less';
+
+@brand-color: #3521ba;
+
+main {
+  .light-theme(@brand-color, #fff);
+}
+
+main.main--dark {
+  .dark-theme(darken(@brand-color, 15%), #000);
+}
