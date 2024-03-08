@@ -1,9 +1,36 @@
-import { init, createRouter } from 'sonata-api'
-// import { pizzaRoutes } from './routes'
+import { init, createRouter, left } from 'sonata-api'
 export * as collections from './collections'
 
 export const router = createRouter()
-// router.group('/pizza', pizzaRoutes)
+router.GET("/searchCheckins", async (context) => {
+  const document:string = context.request.query.document;
+  
+  const person = await context.collections.person.functions.get({
+    filters:{
+      document
+    }
+  }
+  )
+  if (!person){
+    return left("person not found")
+  }
+  const ownerAnimal = await context.collections.animal.functions.getAll(
+    {
+      filters: {
+        owner:person._id
+      }
+    });
+  const checkinanimal = await context.collections.checkin.functions.getAll(
+    {
+      filters:{
+        animal:{ $in:ownerAnimal.map(e=>e._id)}
+      }
+    }
+  )
+    return checkinanimal
+  })
+
+
 
 export default init({
   config: {

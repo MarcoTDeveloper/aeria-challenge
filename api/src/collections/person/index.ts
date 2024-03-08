@@ -23,23 +23,18 @@ export const person = defineCollection({
         description: 'Telefone',
       },
       type: {
-        type: 'object',
         description: 'Tipo',
-        properties: {
-          customer: {
-            type: 'string',
-            description: 'Cliente'
-          }
-        }
+        enum: ['Cliente'],
       },
       ie: {
         type: 'string',
         description: 'Inscrição estadual'
       },
-      // address: {
-      //   $ref: 'geolocation',
-      //   description: 'Endereço',
-      // }
+      address: {
+        $ref: 'geolocation',
+        inline: true,
+        description: 'Endereço',
+      }
     },
     presets: ['crud'],
   },

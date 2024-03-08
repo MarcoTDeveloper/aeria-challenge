@@ -28,7 +28,8 @@ export const geolocation = defineCollection({
       },
       complement: {
         type: 'string',
-        description: 'Complemento'
+        element: 'textarea',
+        description: 'Complemento',
       }
     },
     presets: ['crud'],

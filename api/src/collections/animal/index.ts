@@ -1,4 +1,4 @@
-import { defineCollection, get, getAll, insert, remove } from 'sonata-api'
+import { defineCollection, get, getAll, insert, remove, upload } from 'sonata-api'
 
 export const animal = defineCollection({
   description: {
@@ -8,25 +8,28 @@ export const animal = defineCollection({
     properties: {
       name: {
         type: 'string',
-        description: 'Nome'
+        description: 'Nome',
       },
       owner: {
-        type: 'string',
-        description: 'Dono'
+        $ref: 'person',
+        indexes: ['person', 'name'],
+        description: 'Dono',
       },
       age: {
         type: 'number',
-        description: 'Idade'
+        description: 'Idade',
       },
-      // pictures: {
-        //perguntar sobre - pictures -> file[]
-      // }
+      pictures: {
+        $ref: 'file',
+        description: 'Foto',
+      }
     },
     presets: ['crud'],
   },
   functions: {
     get,
     getAll,
+    upload,
     insert,
     remove,
   },

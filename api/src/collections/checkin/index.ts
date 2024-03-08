@@ -7,8 +7,9 @@ export const checkin = defineCollection({
     required: ['animal', 'weight', 'type', 'reason'],
     properties: {
       animal: {
-        type: 'string',
-        description: 'Nome'
+        $ref: 'animal',
+        indexes: ['animal', 'name'],
+        description: 'Animal'
       },
       weight: {
         type: 'number',
@@ -19,18 +20,8 @@ export const checkin = defineCollection({
         description: 'Temperatura (Cº)'
       },
       type: {
-        type: 'object',
         description: 'Tipo',
-        properties: {
-          routine: {
-            type:'boolean',
-            description: 'Rotina'
-          },
-          emergency: {
-            type: 'boolean',
-            description: 'Emergência'
-          },
-        },
+        enum: ['Rotina', 'Emergência']
       },
       reason: {
         type: 'string',
