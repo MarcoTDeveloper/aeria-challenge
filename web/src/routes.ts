@@ -13,6 +13,14 @@ export const routes = [
         icon: 'gauge',
       },
     },
+    {
+      path: 'financial',
+      component: () => import('./pages/dashboard/financial.vue'),
+      meta: {
+        title: 'Financial',
+        icon: 'gauge',
+      },
+    },
   ]),
   {
     path: '/',

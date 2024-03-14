@@ -10,15 +10,23 @@ export const ptbr = defineLocale({
     'Animais'
   ],
   person: [
-    'person',
+    'pessoa',
     'Pessoas'
   ],
   checkin: [
-    'checkin',
+    'checagem',
     'Checagens'
   ],
+  transaction: [
+    'transação',
+    'Transações'
+  ],
   geolocation: [
-    'geolocation',
+    'endereço',
     'Endereços'
+  ],
+  financial: [
+    'Financeiro',
+    'Financeiro'
   ]
 })

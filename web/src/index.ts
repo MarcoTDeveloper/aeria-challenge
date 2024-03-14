@@ -25,8 +25,9 @@ const options = defineOptions({
     '/dashboard/animal',
     '/dashboard/checkin',
     '/dashboard/geolocation',
+    '/dashboard/transaction',
     '/dashboard/user',
-    // '/dashboard/pizza',
+    '/dashboard/financial',
   ],
 })
 
