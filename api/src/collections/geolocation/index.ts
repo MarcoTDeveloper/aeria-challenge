@@ -1,4 +1,4 @@
-import { defineCollection, get, getAll, insert, remove } from 'sonata-api'
+import { defineCollection, get, getAll, insert, remove } from 'aeria'
 
 export const geolocation = defineCollection({
   description: {

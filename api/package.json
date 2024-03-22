@@ -5,18 +5,35 @@
   "main": "dist/index.js",
   "types": "src/index.ts",
   "scripts": {
-    "build": "sonata-build -ci",
-    "migrate": "sonata-build -m",
-    "dev": "sonata-build -w",
-    "start": "node -r sonata-api/loader ./release/index.js"
+    "build": "aeria -c",
+    "build:icons": "aeria -i",
+    "build:post": "aeria -mik",
+    "dev": "aeria -w",
+    "start": "node -r aeria/loader ./dist/index.js"
+  },
+  "aeriaSdk": {
+    "apiUrl": {
+      "development": "http://localhost:3000/api",
+      "production": "http://corp.aeria.land/api"
+    },
+    "storage": {
+      "strategy": "localStorage",
+      "namespace": "aeria"
+    }
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "sonata-api": "latest"
+    "aeria": "latest",
+    "aeria-sdk": "latest",
+    "discord.js": "^14.14.1",
+    "ejs": "^3.1.9",
+    "node-mailjet": "^6.0.5",
+    "octokit": "^3.1.2"
   },
   "devDependencies": {
-    "sonata-build": "latest"
+    "@types/ejs": "^3.1.5",
+    "aeria-build": "latest"
   }
 }

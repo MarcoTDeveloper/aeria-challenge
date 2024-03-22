@@ -1,12 +1,12 @@
-import { useApp, defineOptions, AeriaMain } from 'waltz-ui'
-import waltzPtbr from '@waltz-ui/i18n-ptbr'
-import { ptbr } from './i18n'
-import { routes } from './routes'
+import { useApp, defineOptions, AeriaMain } from 'aeria-ui';
+import waltzPtbr from '@aeria-ui/i18n-ptbr';
+import { ptbr } from './i18n';
+import { routes } from './routes';
 
-import '@waltz-ui/ui/style.css'
-import 'aeria-app-layout/style.css'
-import './style/main.css'
-import './style/main.less'
+import '@aeria-ui/ui/style.css';
+import 'aeria-app-layout/style.css';
+import './style/main.css';
+import './style/main.less';
 
 const options = defineOptions({
   component: AeriaMain,
@@ -21,17 +21,18 @@ const options = defineOptions({
     },
   },
   menuSchema: [
-    '/dashboard/person',
     '/dashboard/animal',
+    '/dashboard/person',
     '/dashboard/checkin',
     '/dashboard/geolocation',
     '/dashboard/transaction',
+    '/dashboard/appointment',
     '/dashboard/user',
     '/dashboard/financial',
   ],
-})
+});
 
 useApp(options).then((app) => {
   app.mount()
-})
+});
 

@@ -1,27 +1,7 @@
-# Quickstart
+## Notas da versão 1.3.0 :
 
-This is an Aeria project bootstrapped with [`create-aeria-app`]().
-It uses the `npm` package manager, which you may change in the future. You may also replace this README.md file with your own at anytime.
-
-To get documentation, visit [https://aeria.land/](https://aeria.land/).
-
-## Installation
-
-```sh
-$ npm install
-```
-
-## Running
-
-```sh
-$ npm run dev
-```
-
-You may sign in into your application visiting `http://localhost:8080/user/signin`.
-
-
-## Support
-
-- [Official website](https://aeria.land/)
-- [Discord community]() (get live support almost 24/7)
-
+[x] - Implementação com o NextJs;
+[x] - Mudança na collection de animais e pessoas (Agora pessoa que vai referenciar um animal);
+[x] - Em desenvolvimento a página de consulta (Submeter os valores dos inputs nas collections);
+[x] - Em desenvolvimento a página de perfil de animais;
+[x] - Adicionado uma collection de consultas;

@@ -2,8 +2,9 @@
   "name": "quickstart",
   "version": "1.0.0",
   "description": "",
+  "main": "index.js",
   "scripts": {
-    "postinstall": "git init && husky && node scripts/postinstall.js",
+    "postinstall": "husky && node scripts/postinstall.js && cp package-lock.json api && cp package-lock.json web",
     "lint": "eslint api",
     "lint:fix": "eslint api --fix",
     "dev": "dualist api web"
@@ -16,14 +17,16 @@
     "web/"
   ],
   "devDependencies": {
-    "@commitlint/cli": "^17.8.1",
-    "@commitlint/config-conventional": "^17.8.1",
-    "dualist": "latest",
+    "@commitlint/cli": "17.8.1",
+    "@commitlint/config-conventional": "17.8.1",
+    "dualist": "^0.0.5",
     "eslint-config-aeria": "latest",
     "eslint-plugin-vue": "^9.22.0",
-    "typescript": "^5.4.0-beta"
+    "husky": "^9.0.10",
+    "nodemon": "^3.0.1",
+    "typescript": "^5.2.2"
   },
   "dependencies": {
-    "husky": "^9.0.10"
+    "vue3-recaptcha2": "^1.8.0"
   }
 }

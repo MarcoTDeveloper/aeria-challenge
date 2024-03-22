@@ -1,4 +1,4 @@
-import { defineCollection, get, getAll, insert, remove } from 'sonata-api'
+import { defineCollection, get, getAll, insert, remove } from 'aeria'
 
 export const checkin = defineCollection({
   description: {
@@ -25,7 +25,7 @@ export const checkin = defineCollection({
       },
       reason: {
         type: 'string',
-        description: 'Razão'
+        description: 'Motivo'
       }
     },
     presets: ['crud'],

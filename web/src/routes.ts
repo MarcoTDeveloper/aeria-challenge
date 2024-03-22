@@ -1,30 +1,17 @@
-import { userRoutes, dashboardRoutes } from 'waltz-ui'
-import DashboardLayout from './pages/_dashboard.vue'
+import { userRoutes, dashboardRoutes } from 'aeria-ui'
 import { AuthWall } from 'aeria-app-layout'
+import { routes as autoRoutes } from 'vue-router/auto-routes'
+import DashboardLayout from './pages/dashboard.vue'
 
-export const routes = [
+export const routes = autoRoutes.concat([
   userRoutes(AuthWall),
-  dashboardRoutes(DashboardLayout, [
-    {
-      path: '',
-      component: () => import('./pages/dashboard/index.vue'),
-      meta: {
-        title: 'Dashboard',
-        icon: 'gauge',
-      },
-    },
-    {
-      path: 'financial',
-      component: () => import('./pages/dashboard/financial.vue'),
-      meta: {
-        title: 'Financial',
-        icon: 'gauge',
-      },
-    },
-  ]),
+  dashboardRoutes(DashboardLayout),
   {
     path: '/',
     component: () => import('./pages/index.vue'),
   },
-]
-
+  {
+    path: '/appointment',
+    component: () => import('./pages/appointment.vue'),
+  }
+])

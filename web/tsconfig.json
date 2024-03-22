@@ -7,13 +7,16 @@
     "strict": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
+    "preserveSymlinks": true,
     "types": [
-      "@waltz-ui/ui/vue"
+      "@aeria-ui/ui/vue",
+      "unplugin-vue-router/client"
     ]
   },
   "include": [
-    "../api/@types/*.d.ts",
+    "../api/.aeria/aeria-sdk.d.ts",
+    "@types/*.d.ts",
     "src",
-    "*.d.ts"
+    ".aeria-ui/*.d.ts"
   ]
 }

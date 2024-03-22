@@ -1,4 +1,4 @@
-import { defineLocale } from 'waltz-ui'
+import { defineLocale } from 'aeria-ui';
 
 export const ptbr = defineLocale({
   pizza: [
@@ -26,7 +26,11 @@ export const ptbr = defineLocale({
     'Endereços'
   ],
   financial: [
-    'Financeiro',
+    'financeiro',
     'Financeiro'
+  ],
+  appointment: [
+    "consulta",
+    "Consultas"
   ]
 })

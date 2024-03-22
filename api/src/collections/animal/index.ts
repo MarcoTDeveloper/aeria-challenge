@@ -1,19 +1,14 @@
-import { defineCollection, get, getAll, insert, remove, upload } from 'sonata-api'
+import { defineCollection, get, getAll, insert, remove, upload } from 'aeria'
 
 export const animal = defineCollection({
   description: {
     $id: 'animal',
     icon: 'dog',
-    required: ['name', 'owner', 'age'],
+    required: ['name'],
     properties: {
       name: {
         type: 'string',
         description: 'Nome',
-      },
-      owner: {
-        $ref: 'person',
-        indexes: ['person', 'name'],
-        description: 'Dono',
       },
       age: {
         type: 'number',
@@ -21,7 +16,18 @@ export const animal = defineCollection({
       },
       pictures: {
         $ref: 'file',
+        accept: [
+          'image/*'
+        ],
         description: 'Foto',
+      },
+      breed: {
+        type: 'string',
+        description: 'Raça'
+      },
+      species: {
+        type: 'string',
+        description: 'Especie'
       }
     },
     presets: ['crud'],

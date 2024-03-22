@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Header from '../components/Header.vue';
+import { ref } from "vue";
 
 type Checkins = {
   _id: string;
@@ -46,6 +47,11 @@ const searchCheckins = async () => {
       <button
         @click="searchCheckins"
         class="
+        tw-transition-all
+        tw-border-2
+        tw-border-indigo-300
+        hover:tw-border-indigo-600
+        focus:tw-outline-indigo-500
         md:tw-max-w-32
         focus:tw-outline-indigo-300
         tw-w-full tw-justify-center tw-flex tw-items-center tw-gap-2 tw-bg-indigo-700 tw-text-white tw-font-bold tw-rounded-lg tw-px-4 hover:tw-cursor-pointer tw-h-11"
@@ -55,18 +61,18 @@ const searchCheckins = async () => {
       </button>
     </div>
 
-    <main class="tw-flex tw-flex-col tw-gap-8 tw-mx-10 md:tw-mx-20 tw-mb-20 tw-border-2 tw-border-indigo-400 tw-p-12 tw-bg-indigo-700 tw-rounded-lg">
+    <main class="tw-flex tw-flex-col tw-gap-8 tw-mx-10 md:tw-mx-20 tw-border-2 tw-border-indigo-500 tw-p-10 tw-rounded-lg">
       <template v-if="!result.length">
-        <div class="tw-text-center tw-text-white tw-font-bold">
+        <div class="tw-text-center tw-text-white tw-text-indigo-500 tw-font-bold">
           Nada por aqui...
         </div>
       </template>
       <template v-else>
         <div v-for="checkin in result" :key="checkin._id">
-          <span class="tw-font-bold tw-text-white tw-text-lg">
+          <span class="tw-font-bold tw-text-indigo-500 tw-text-lg">
             Check-in feito em: {{ new Date(checkin.created_at).toLocaleDateString("pt-br") }}
           </span>
-          <div class="tw-text-white tw-border-2 tw-border-indigo-600 tw-rounded-lg tw-shadow-lg tw-p-4">
+          <div class="tw-text-indigo-500 tw-border-2 tw-bg-indigo-100 tw-border-indigo-500 tw-rounded-lg tw-shadow-lg tw-p-4">
             <p class="tw-font-bold">Nome:</p>
             <p class="tw-ml-2">{{ checkin.animal.name }}</p>
             <p class="tw-font-bold">Peso (Kg):</p>

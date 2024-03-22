@@ -1,7 +1,13 @@
 {
-    "extends": "sonata-build/config/tsconfig.json",
+    "extends": "aeria-build/config/tsconfig.json",
     "compilerOptions": {
         "outDir": "dist",
-        "preserveSymlinks": true
-    }
+        "preserveSymlinks": true,
+        "target": "ESNext"
+    },
+    "include": [
+        "@types/*.d.ts",
+        ".aeria/aeria.d.ts",
+        "src"
+    ]
 }
