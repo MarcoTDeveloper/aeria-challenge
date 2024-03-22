@@ -13,5 +13,5 @@ export const routes = autoRoutes.concat([
   {
     path: '/appointment',
     component: () => import('./pages/appointment.vue'),
-  }
+  },
 ])

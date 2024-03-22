@@ -16,19 +16,17 @@ export const animal = defineCollection({
       },
       pictures: {
         $ref: 'file',
-        accept: [
-          'image/*'
-        ],
+        accept: ['image/*'],
         description: 'Foto',
       },
       breed: {
         type: 'string',
-        description: 'Raça'
+        description: 'Raça',
       },
       species: {
         type: 'string',
-        description: 'Especie'
-      }
+        description: 'Especie',
+      },
     },
     presets: ['crud'],
   },

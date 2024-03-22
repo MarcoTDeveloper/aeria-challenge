@@ -4,7 +4,11 @@ export const appointment = defineCollection({
   description: {
     $id: 'appointment',
     icon: 'clock-countdown',
-    required: ['client', 'date', 'reason'],
+    required: [
+      'client',
+      'date',
+      'reason',
+    ],
     properties: {
       client: {
         $ref: 'person',
@@ -14,17 +18,17 @@ export const appointment = defineCollection({
       date: {
         type: 'string',
         format: 'date-time',
-        description: 'Horário'
+        description: 'Horário',
       },
       reason: {
         type: 'string',
-        description: 'Motivo'
+        description: 'Motivo',
       },
       complement: {
         type: 'string',
         element: 'textarea',
-        description: 'Descrição'
-      }
+        description: 'Descrição',
+      },
     },
     presets: ['crud'],
   },

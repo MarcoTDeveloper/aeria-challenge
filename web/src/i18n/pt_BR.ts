@@ -1,4 +1,4 @@
-import { defineLocale } from 'aeria-ui';
+import { defineLocale } from 'aeria-ui'
 
 export const ptbr = defineLocale({
   pizza: [
@@ -7,30 +7,30 @@ export const ptbr = defineLocale({
   ],
   animal: [
     'animal',
-    'Animais'
+    'Animais',
   ],
   person: [
     'pessoa',
-    'Pessoas'
+    'Pessoas',
   ],
   checkin: [
     'checagem',
-    'Checagens'
+    'Checagens',
   ],
   transaction: [
     'transação',
-    'Transações'
+    'Transações',
   ],
   geolocation: [
     'endereço',
-    'Endereços'
+    'Endereços',
   ],
   financial: [
     'financeiro',
-    'Financeiro'
+    'Financeiro',
   ],
   appointment: [
-    "consulta",
-    "Consultas"
-  ]
+    'consulta',
+    'Consultas',
+  ],
 })

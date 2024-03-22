@@ -4,7 +4,14 @@ export const geolocation = defineCollection({
   description: {
     $id: 'geolocation',
     icon: 'address-book',
-    required: ['country', 'zip_code', 'country', 'state', 'district', 'number'],
+    required: [
+      'country',
+      'zip_code',
+      'country',
+      'state',
+      'district',
+      'number',
+    ],
     properties: {
       zip_code: {
         type: 'string',
@@ -30,7 +37,7 @@ export const geolocation = defineCollection({
         type: 'string',
         element: 'textarea',
         description: 'Complemento',
-      }
+      },
     },
     presets: ['crud'],
   },

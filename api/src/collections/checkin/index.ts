@@ -4,29 +4,40 @@ export const checkin = defineCollection({
   description: {
     $id: 'checkin',
     icon: 'check-circle',
-    required: ['animal', 'weight', 'type', 'reason'],
+    required: [
+      'animal',
+      'weight',
+      'type',
+      'reason',
+    ],
     properties: {
       animal: {
         $ref: 'animal',
-        indexes: ['animal', 'name'],
-        description: 'Animal'
+        indexes: [
+          'animal',
+          'name',
+        ],
+        description: 'Animal',
       },
       weight: {
         type: 'number',
-        description: 'Peso (Kg)'
+        description: 'Peso (Kg)',
       },
       temperature: {
         type: 'number',
-        description: 'Temperatura (Cº)'
+        description: 'Temperatura (Cº)',
       },
       type: {
         description: 'Tipo',
-        enum: ['Rotina', 'Emergência']
+        enum: [
+          'Rotina',
+          'Emergência',
+        ],
       },
       reason: {
         type: 'string',
-        description: 'Motivo'
-      }
+        description: 'Motivo',
+      },
     },
     presets: ['crud'],
   },

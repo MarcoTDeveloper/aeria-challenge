@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { DashboardLayout } from 'aeria-app-layout'
-import { useStore } from 'aeria-ui';
+import { useStore } from 'aeria-ui'
 
 const metaStore = useStore('meta')
 </script>
