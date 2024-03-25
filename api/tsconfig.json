@@ -2,8 +2,7 @@
     "extends": "aeria-build/config/tsconfig.json",
     "compilerOptions": {
         "outDir": "dist",
-        "preserveSymlinks": true,
-        "target": "ESNext"
+        "preserveSymlinks": true
     },
     "include": [
         "@types/*.d.ts",

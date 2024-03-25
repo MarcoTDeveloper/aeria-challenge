@@ -1,9 +1,9 @@
-export * from './person'
-export * from './animal'
-export * from './checkin'
-export * from './transaction'
-export * from './appointment'
-export * from './geolocation'
+export * from './person/index.js'
+export * from './animal/index.js'
+export * from './checkin/index.js'
+export * from './transaction/index.js'
+export * from './appointment/index.js'
+export * from './geolocation/index.js'
 
 export {
   user,

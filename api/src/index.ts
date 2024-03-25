@@ -1,5 +1,5 @@
 import { init, createRouter } from 'aeria'
-export * as collections from './collections'
+export * as collections from './collections/index.js'
 
 export const router = createRouter()
 router.GET('/transactionsBalance', async (context) => {
@@ -86,3 +86,4 @@ export default init({
     return router.install(context)
   },
 })
+

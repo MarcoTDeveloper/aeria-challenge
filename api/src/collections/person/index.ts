@@ -58,3 +58,4 @@ export const person = defineCollection({
     remove,
   },
 })
+
