@@ -1,5 +1,6 @@
 {
   "name": "api",
+  "type": "module",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -26,7 +27,6 @@
   "license": "ISC",
   "dependencies": {
     "aeria": "latest",
-    "aeria-sdk": "latest",
     "discord.js": "^14.14.1",
     "ejs": "^3.1.9",
     "node-mailjet": "^6.0.5",
@@ -35,5 +35,8 @@
   "devDependencies": {
     "@types/ejs": "^3.1.5",
     "aeria-build": "latest"
+  },
+  "peerDependencies": {
+    "aeria-sdk": "*"
   }
 }

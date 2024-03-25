@@ -1,6 +1,13 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
+definePage({
+  meta: {
+    title: 'Transações',
+    icon: 'currency-dollar'
+  }
+})
+
 type Transactions = {
   balance: number;
   payTransactions: number;
@@ -34,11 +41,10 @@ const formatMoney = (value: number | undefined) => {
     class="
       tw-justify-center
       tw-items-center
-      tw-flex
-      tw-flex-col
+      tw-grid
       tw-gap-4
 
-      md:tw-flex-row
+      md:tw-grid-cols-3
     "
   >
     <div
@@ -49,9 +55,6 @@ const formatMoney = (value: number | undefined) => {
         tw-p-6
         tw-w-full
         tw-mx-auto
-
-        md:tw-m-0
-        md:tw-w-80
       "
     >
       <div
@@ -89,9 +92,7 @@ const formatMoney = (value: number | undefined) => {
         tw-p-6
         tw-w-full
         tw-mx-auto
-
         md:tw-m-0
-        md:tw-w-80
       "
     >
       <div
@@ -129,9 +130,7 @@ const formatMoney = (value: number | undefined) => {
         tw-p-6
         tw-w-full
         tw-mx-auto
-
         md:tw-m-0
-        md:tw-w-80
       "
     >
       <div
